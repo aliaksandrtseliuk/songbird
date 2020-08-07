@@ -134,12 +134,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: cssLoaders(),
-      },
-      {
-        test: /\.s[ac]ss$/,
-        use: cssLoaders('sass-loader'),
+        test: /\.(scss|sass|css)$/,
+        exclude: /node_modules/,
+        loaders: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: true,
+              importLoaders: 1,
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpg|svg|gif)$/,

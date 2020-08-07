@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-// import Layout from "./hoc/Layout/Layout";
-// import Quiz from './containers/Quiz/Quiz'
+import Layout from './hoc/Layout/Layout.jsx';
+import Header from './containers/Header/Header.jsx'
+import Main from './containers/Main/Main.jsx'
 
 class App extends Component {
   render() {
     return (
-      // <Layout>
-      //  <Quiz />
-      // </Layout>
-      <div>
-      <h1>Все ОК</h1>
-      <div style={{width: '100', height: '100', 'background-image': 'url(/assets/img/logo.svg)'}}></div>
-      </div>
+      <Layout>
+        <Header />
+        <Main />
+      </Layout>
     );
   }
 }
