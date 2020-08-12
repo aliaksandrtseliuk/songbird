@@ -1,0 +1,57 @@
+.BirdInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 10px;
+}
+
+.BirdInfo__image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 7;
+  }
+
+.BirdInfo__title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.BirdInfo::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+    }
+
+.BirdInfo__latin {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+.BirdInfo::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+    }
+
+
+.BirdInfo__audio {
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+  }
+
+  .BirdInfo__description {
+    grid-column: 1 / 3;
+    grid-row: 7 / 8;
+    text-align: justify;
+  }

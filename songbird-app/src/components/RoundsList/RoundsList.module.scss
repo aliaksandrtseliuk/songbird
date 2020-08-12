@@ -1,0 +1,7 @@
+.RoundsList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: 10px;
+  background-color: #017ab3;
+}

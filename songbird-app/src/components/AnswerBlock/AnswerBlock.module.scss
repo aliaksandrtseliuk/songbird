@@ -1,0 +1,11 @@
+.AnswerBlock {
+  margin-top: 20px;
+  padding: 2rem;
+  width: 100%;
+  min-height: 350px;
+  background-color: #017ab3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  border-radius: 10px;
+}

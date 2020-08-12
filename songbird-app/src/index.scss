@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  color:#fff;
+}
+
+a {
+  text-decoration: none;
+ }
+
+li {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}

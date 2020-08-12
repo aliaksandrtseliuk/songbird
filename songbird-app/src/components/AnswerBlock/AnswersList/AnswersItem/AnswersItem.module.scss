@@ -1,0 +1,14 @@
+.AnswersItem {
+  padding-left: 2.5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: #4da1c9;
+  cursor: pointer;
+}
+
+.AnswersItem:hover,
+.AnswersItem:focus {
+    opacity: .8;
+  }
