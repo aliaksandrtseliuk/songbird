@@ -17,7 +17,9 @@ class Main extends Component {
       roundPoints, 
       userAnswer, 
       rightAnswerNumber, 
-      getRightAnswer 
+      getRightAnswer,
+      newSetState,
+      isGameFinished 
     } = this.props;
 
     return (
@@ -28,7 +30,8 @@ class Main extends Component {
         <ActiveQuestion 
           getRightAnswer = {getRightAnswer}
           rightAnswerNumber = {rightAnswerNumber}
-          currentQuestion = {birdsData[0][0]}
+          currentQuestionsBlock = {birdsData[activeRound]}
+          newSetState = {newSetState}
         />
         <AnswerBlock
           currentScore = {currentScore} 
@@ -38,6 +41,7 @@ class Main extends Component {
           getRightAnswer={getRightAnswer}
           activeRound={activeRound}
           userAnswer = { userAnswer }
+          newSetState = {newSetState}
         />
         <LevelButton />
       </section>

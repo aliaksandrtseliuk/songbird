@@ -3,7 +3,7 @@ import classes from './Score.module.scss'
 
 const Score = props => {
   return (
-  <p className={classes.Score}>Score: {props.currentScore}</p>
+  <p className={classes.Score}>Баллы: {props.currentScore}</p>
   )
 }
 

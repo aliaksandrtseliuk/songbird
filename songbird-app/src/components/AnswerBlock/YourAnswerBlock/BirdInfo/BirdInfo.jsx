@@ -1,4 +1,8 @@
 import React from 'react'
+
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/src/styles.scss'
+
 import classes from './BirdInfo.module.scss'
 
 const BirdInfo = props => {
@@ -9,7 +13,9 @@ const BirdInfo = props => {
       </div>
       <h3 className={classes.BirdInfo__title}>{props.bird.name}</h3>
       <h4 className={classes.BirdInfo__latin}>{props.bird.species}</h4>
-      <div className={classes.BirdInfo__audio}>Плеер</div>
+      <div className={classes.BirdInfo__audio}>
+        <AudioPlayer />
+      </div>
       <p className={classes.BirdInfo__description}>{props.bird.description}</p>
     </div>
   )

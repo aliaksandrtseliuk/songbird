@@ -15,6 +15,10 @@ class App extends Component {
     isGameFinished: false
   }
 
+  newSetState = (prop, value) => (
+    this.setState((prevState) => ({ [prop]: value }))
+  );
+
   render() {
     return (
       <Layout>
@@ -30,6 +34,7 @@ class App extends Component {
           rightAnswerNumber = {this.state.rightAnswerNumber}
           userAnswer = {this.state.userAnswer}
           isGameFinished = {this.state.isGameFinished}
+          newSetState = {this.newSetState}
         />
       </Layout>
     );

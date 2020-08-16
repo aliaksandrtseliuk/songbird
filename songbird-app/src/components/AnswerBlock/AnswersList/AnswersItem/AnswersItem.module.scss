@@ -12,3 +12,11 @@
 .AnswersItem:focus {
     opacity: .8;
   }
+
+.success {
+  background: rgba(161, 240, 69, .7);
+}
+
+.error {
+  background: rgba(240, 87, 108, .7);
+}

@@ -1,18 +1,89 @@
 import React, { Component } from 'react'
 import classes from './AnswersItem.module.scss'
 
-class AnswersItem extends Component {
+import correctSoundUrl from '../../../../assets/sounds/correct.mp3'
+import wrongSoundUrl from '../../../../assets/sounds/error.mp3'
 
+class AnswersItem extends Component {
+  state = {
+    isClickOnItem: false,
+    isCorrectAnswerItem: false,
+    status: null
+  }
 
   getUserAnswer = () => {
-    const {id} = this.props;
+    // const { isClickOnItem } = this.state;
+
+    const {
+      id, 
+      rightAnswerNumber, 
+      getRightAnswer, 
+      userAnswer, 
+      currentScore, 
+      roundPoints, 
+      activeRound,
+      newSetState,
+    } = this.props;
+
+    const rightAnswerSound = new Audio();
+    const wrongAnswerSound = new Audio();
+    rightAnswerSound.src = correctSoundUrl;
+    wrongAnswerSound.src = wrongSoundUrl;
+
+    newSetState('userAnswer', id - 1)
+
+    if (getRightAnswer) return
+    else {
+
+
+      if (id === rightAnswerNumber) {
+        rightAnswerSound.play()
+
+        this.setState({
+          isCorrectAnswerItem : true,
+          status: 'success'
+        })
+
+        newSetState('getRightAnswer', true)
+        newSetState('currentScore', currentScore + roundPoints)
+
+        if (activeRound === 5) {
+          newSetState('isGameFinished', true)
+          newSetState('activeRound', 0)
+        }
+      } else {
+        const currentPonts = roundPoints - 1
+        newSetState('roundPoints', currentPonts)
+        wrongAnswerSound.play()
+        
+        this.setState({
+          status: 'error'
+        })
+      }
+    }
   }
 
   render() {
-    const {id, text} = this.props;
+    const {id, text, isClickOnItem, isCorrectAnswerItem} = this.props;
+    const cls = [classes.AnswersItem]
+
+    // switch (this.state.status) {
+    //   case 'success' : cls.push(classes.success)
+    //   break;
+    //   case 'error' : cls.push(classes.error)
+    //   break;
+    //   default: console.log('ОК');
+    // }
+
+    if (this.state.status === 'success') {
+      cls.push(classes.success)
+    } else if (this.state.status === 'error') {
+      cls.push(classes.error)
+    }
+
     return (
       <li 
-        className={classes.AnswersItem}
+        className={cls.join(' ')}
         id={id}
         onClick={this.getUserAnswer}
       >
@@ -23,3 +94,11 @@ class AnswersItem extends Component {
 }
 
 export default AnswersItem
+
+// id={item.id}
+// rightAnswerNumber = {props.rightAnswerNumber}
+// getRightAnswer = {props.getRightAnswer}
+// userAnswer = {props.userAnswer}
+// currentScore = {props.currentScore}
+// roundPoints = {props.roundPoints}
+// activeRound = {props.activeRound}
