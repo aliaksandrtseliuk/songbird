@@ -6,7 +6,7 @@ import BirdInfo from './BirdInfo/BirdInfo.jsx'
 const YourAnswerBlock = props => {
   return (
     <div className={classes.YourAnswerBlock}>
-      { props.userAnswer ? 
+      { props.userAnswer || props.userAnswer === 0? 
         <BirdInfo 
           bird = { props.currentBird }
         /> 

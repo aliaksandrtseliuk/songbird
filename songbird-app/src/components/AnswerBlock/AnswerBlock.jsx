@@ -14,7 +14,7 @@ class AnswerBlock extends Component {
       activeRound,
       userAnswer,
       newSetState,
-      isGameFinished
+      isGameFinished,
      } = this.props;
 
      return (
@@ -30,7 +30,8 @@ class AnswerBlock extends Component {
           newSetState = {newSetState}
         />
         <YourAnswerBlock
-          currentBird = {answers[0]}
+          currentBird = {answers[userAnswer]}
+          userAnswer = {userAnswer}
         />
       </section>
     )

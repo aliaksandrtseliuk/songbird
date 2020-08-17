@@ -8,6 +8,8 @@ import ActiveQuestion from '../../components/ActiveQuestion/ActiveQuestion.jsx'
 import AnswerBlock from '../../components/AnswerBlock/AnswerBlock.jsx'
 import LevelButton from '../../components/LevelButton/LevelButton.jsx'
 
+import ModalBlock from '../../components/ModalBlock/ModalBlock.jsx'
+
 class Main extends Component {
   render() {
     const { 
@@ -19,33 +21,52 @@ class Main extends Component {
       rightAnswerNumber, 
       getRightAnswer,
       newSetState,
-      isGameFinished 
+      isGameFinished,
     } = this.props;
 
-    return (
-      <section className={classes.Main}>
-        <RoundsList 
-          rounds={rounds}
-        />
-        <ActiveQuestion 
-          getRightAnswer = {getRightAnswer}
-          rightAnswerNumber = {rightAnswerNumber}
-          currentQuestionsBlock = {birdsData[activeRound]}
-          newSetState = {newSetState}
-        />
-        <AnswerBlock
-          currentScore = {currentScore} 
-          answers={birdsData[activeRound]}
-          roundPoints={roundPoints}
-          rightAnswerNumber={rightAnswerNumber}
-          getRightAnswer={getRightAnswer}
-          activeRound={activeRound}
-          userAnswer = { userAnswer }
-          newSetState = {newSetState}
-        />
-        <LevelButton />
-      </section>
-    )
+    if (!isGameFinished) {
+      return (
+        <section className={classes.Main}>
+          <RoundsList 
+            rounds={rounds}
+          />
+          <ActiveQuestion 
+            getRightAnswer = {getRightAnswer}
+            rightAnswerNumber = {rightAnswerNumber}
+            currentQuestionsBlock = {birdsData[activeRound]}
+            newSetState = {newSetState}
+          />
+          <AnswerBlock
+            currentScore = {currentScore} 
+            answers={birdsData[activeRound]}
+            roundPoints={roundPoints}
+            rightAnswerNumber={rightAnswerNumber}
+            getRightAnswer={getRightAnswer}
+            activeRound={activeRound}
+            userAnswer = {userAnswer}
+            newSetState = {newSetState}
+          />
+          <LevelButton 
+            getRightAnswer={getRightAnswer}
+            newSetState = {newSetState}
+            activeRound={activeRound}
+          />
+        </section>
+      )
+    } else {
+      return (
+        <section className={classes.Main}>
+          <RoundsList 
+            rounds={rounds}
+          />
+          <ModalBlock 
+            currentScore = {currentScore} 
+            newSetState = {newSetState}
+          />
+        </section>
+      )
+    }
+    
   }
 }
 

@@ -3,7 +3,6 @@ import classes from './QuestionImage.module.scss'
 import unknownBird from '../../../assets/img/unknown_bird.jpg'
 
 const QuestionImage = props => {
-  console.log(props)
   return (
     <div className={classes.QuestionImage}>
       <img 

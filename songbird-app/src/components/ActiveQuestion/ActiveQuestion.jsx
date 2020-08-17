@@ -10,11 +10,9 @@ import 'react-h5-audio-player/src/styles.scss'
 class ActiveQuestion extends Component {
 
   componentDidMount() {
+    let { newSetState } = this.props;
     const newRightAnswerNumber = Math.floor(Math.random() * 6) + 1
-    console.log(newRightAnswerNumber)
-    this.setState({
-      rightAnswerNumber: newRightAnswerNumber,
-    })
+    newSetState('rightAnswerNumber', newRightAnswerNumber)
   }
 
   // componentDidUpdate() {

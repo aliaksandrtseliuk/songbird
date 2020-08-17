@@ -14,7 +14,10 @@ const BirdInfo = props => {
       <h3 className={classes.BirdInfo__title}>{props.bird.name}</h3>
       <h4 className={classes.BirdInfo__latin}>{props.bird.species}</h4>
       <div className={classes.BirdInfo__audio}>
-        <AudioPlayer />
+        <AudioPlayer 
+          src = {props.bird.audio}
+          autoPlayAfterSrcChange={false}
+        />
       </div>
       <p className={classes.BirdInfo__description}>{props.bird.description}</p>
     </div>

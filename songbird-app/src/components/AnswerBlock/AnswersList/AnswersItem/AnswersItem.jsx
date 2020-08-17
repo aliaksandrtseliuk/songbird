@@ -6,14 +6,16 @@ import wrongSoundUrl from '../../../../assets/sounds/error.mp3'
 
 class AnswersItem extends Component {
   state = {
-    isClickOnItem: false,
-    isCorrectAnswerItem: false,
     status: null
   }
 
-  getUserAnswer = () => {
-    // const { isClickOnItem } = this.state;
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    if (nextProps.text !== this.props.text) {
+      nextState.status = null;
+    }
+  }
 
+  getUserAnswer = () => {
     const {
       id, 
       rightAnswerNumber, 
@@ -34,8 +36,6 @@ class AnswersItem extends Component {
 
     if (getRightAnswer) return
     else {
-
-
       if (id === rightAnswerNumber) {
         rightAnswerSound.play()
 
@@ -46,16 +46,11 @@ class AnswersItem extends Component {
 
         newSetState('getRightAnswer', true)
         newSetState('currentScore', currentScore + roundPoints)
-
-        if (activeRound === 5) {
-          newSetState('isGameFinished', true)
-          newSetState('activeRound', 0)
-        }
       } else {
         const currentPonts = roundPoints - 1
         newSetState('roundPoints', currentPonts)
         wrongAnswerSound.play()
-        
+
         this.setState({
           status: 'error'
         })
@@ -64,7 +59,7 @@ class AnswersItem extends Component {
   }
 
   render() {
-    const {id, text, isClickOnItem, isCorrectAnswerItem} = this.props;
+    const {id, text} = this.props;
     const cls = [classes.AnswersItem]
 
     // switch (this.state.status) {
@@ -94,11 +89,3 @@ class AnswersItem extends Component {
 }
 
 export default AnswersItem
-
-// id={item.id}
-// rightAnswerNumber = {props.rightAnswerNumber}
-// getRightAnswer = {props.getRightAnswer}
-// userAnswer = {props.userAnswer}
-// currentScore = {props.currentScore}
-// roundPoints = {props.roundPoints}
-// activeRound = {props.activeRound}
