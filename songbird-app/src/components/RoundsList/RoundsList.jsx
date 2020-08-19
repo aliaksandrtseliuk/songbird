@@ -9,7 +9,9 @@ const RoundsList = props => {
         return (
           <RoundsItem 
             key={index}
+            index={index}
             title={item}
+            activeRound={props.activeRound}
           />
         )
       })}

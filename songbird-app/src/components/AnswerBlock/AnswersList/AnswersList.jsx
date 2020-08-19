@@ -13,10 +13,8 @@ const AnswersList = props => {
             id={item.id}
             rightAnswerNumber = {props.rightAnswerNumber}
             getRightAnswer = {props.getRightAnswer}
-            userAnswer = {props.userAnswer}
             currentScore = {props.currentScore}
             roundPoints = {props.roundPoints}
-            activeRound = {props.activeRound}
             newSetState = {props.newSetState}
           />
         )

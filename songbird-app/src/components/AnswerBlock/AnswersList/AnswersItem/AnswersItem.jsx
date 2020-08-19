@@ -20,10 +20,8 @@ class AnswersItem extends Component {
       id, 
       rightAnswerNumber, 
       getRightAnswer, 
-      userAnswer, 
       currentScore, 
       roundPoints, 
-      activeRound,
       newSetState,
     } = this.props;
 
@@ -61,14 +59,6 @@ class AnswersItem extends Component {
   render() {
     const {id, text} = this.props;
     const cls = [classes.AnswersItem]
-
-    // switch (this.state.status) {
-    //   case 'success' : cls.push(classes.success)
-    //   break;
-    //   case 'error' : cls.push(classes.error)
-    //   break;
-    //   default: console.log('ОК');
-    // }
 
     if (this.state.status === 'success') {
       cls.push(classes.success)

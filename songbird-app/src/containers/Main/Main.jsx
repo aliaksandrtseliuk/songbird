@@ -17,7 +17,6 @@ class Main extends Component {
       rounds, 
       activeRound, 
       roundPoints, 
-      userAnswer, 
       rightAnswerNumber, 
       getRightAnswer,
       newSetState,
@@ -28,7 +27,8 @@ class Main extends Component {
       return (
         <section className={classes.Main}>
           <RoundsList 
-            rounds={rounds}
+            rounds = {rounds}
+            activeRound = {activeRound}
           />
           <ActiveQuestion 
             getRightAnswer = {getRightAnswer}
@@ -42,8 +42,6 @@ class Main extends Component {
             roundPoints={roundPoints}
             rightAnswerNumber={rightAnswerNumber}
             getRightAnswer={getRightAnswer}
-            activeRound={activeRound}
-            userAnswer = {userAnswer}
             newSetState = {newSetState}
           />
           <LevelButton 

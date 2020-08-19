@@ -11,10 +11,8 @@ class AnswerBlock extends Component {
       roundPoints,
       rightAnswerNumber,
       getRightAnswer,
-      activeRound,
       userAnswer,
-      newSetState,
-      isGameFinished,
+      newSetState
      } = this.props;
 
      return (
@@ -25,8 +23,6 @@ class AnswerBlock extends Component {
           roundPoints={roundPoints}
           rightAnswerNumber={rightAnswerNumber}
           getRightAnswer={getRightAnswer}
-          activeRound={activeRound}
-          userAnswer = {userAnswer}
           newSetState = {newSetState}
         />
         <YourAnswerBlock
