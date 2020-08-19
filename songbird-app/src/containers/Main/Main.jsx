@@ -17,7 +17,8 @@ class Main extends Component {
       rounds, 
       activeRound, 
       roundPoints, 
-      rightAnswerNumber, 
+      rightAnswerNumber,
+      userAnswer, 
       getRightAnswer,
       newSetState,
       isGameFinished,
@@ -40,6 +41,7 @@ class Main extends Component {
             currentScore = {currentScore} 
             answers={birdsData[activeRound]}
             roundPoints={roundPoints}
+            userAnswer={userAnswer}
             rightAnswerNumber={rightAnswerNumber}
             getRightAnswer={getRightAnswer}
             newSetState = {newSetState}
