@@ -6,6 +6,16 @@
   border-radius: 1rem;
   background-color: #4da1c9;
   cursor: pointer;
+
+  @media (max-width: 740px) {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 1.5rem;
+  }
 }
 
 .AnswersItem:hover,

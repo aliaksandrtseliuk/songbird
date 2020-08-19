@@ -1,11 +1,26 @@
 .AnswerBlock {
-  margin-top: 20px;
+  margin-top: 2rem;
   padding: 2rem;
   width: 100%;
-  min-height: 400px;
+  min-height: 40rem;
   background-color: #017ab3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  border-radius: 10px;
+  grid-gap: 2rem;
+  border-radius: 1rem;
+
+  @media (max-width: 530px) {
+    padding: 1rem;
+    grid-gap: 1rem;
+    min-height: 56rem;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 350px) {
+    padding: .5rem;
+    grid-gap: .5rem;
+  }
 }

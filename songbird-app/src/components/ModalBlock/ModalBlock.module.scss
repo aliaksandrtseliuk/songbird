@@ -5,16 +5,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
   background-color: #017ab3;
 
   &__Title {
     width: max-content;
     font-size: 6rem;
+
+    @media (max-width: 550px) {
+      font-size: 4rem;
+    }
   }
 
   &__Text {
     margin-top: 1.5rem;
-    width: max-content;
+    width: 100%;
+    text-align: center;
   }
 
   &__Image {
@@ -25,5 +31,15 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('../../assets/img/congratulation.gif');
+    
+    @media (max-width: 500px) {
+      width: 320px;
+      height: 145px;
+    }
+
+    @media (max-width: 320px) {
+      width: 200px;
+      height: 91px;
+    }
   }
 }

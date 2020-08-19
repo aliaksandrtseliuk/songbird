@@ -2,4 +2,8 @@
   margin: 0 auto;
   width: 102rem;
   height: 100vh;
+
+  @media (max-width: 1019px) {
+    width: 100%;
+  }
 }

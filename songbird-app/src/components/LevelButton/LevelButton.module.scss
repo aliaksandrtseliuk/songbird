@@ -1,13 +1,17 @@
 .LevelButton {
-  margin-top: 20px;
+  margin-top: 2rem;
   width: 100%;
-  height: 50px;
+  height: 5rem;
   font-size: 2rem;
-  border-radius: 10px;
+  border-radius: 1rem;
   color: #fff;
   background-color: grey;
   border: none;
   outline: none;
+
+  @media (max-width: 500px) {
+    margin-top: 1rem;
+  }
 }
 
 .enabled {

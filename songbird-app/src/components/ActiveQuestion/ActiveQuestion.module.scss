@@ -1,12 +1,34 @@
 .ActiveQuestion{
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 2rem;
+  padding: 2rem;
   width: 100%;
-  min-height: 200px;
+  min-height: 20rem;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   background-color: #017ab3;
+
+  @media (max-width: 690px) {
+    grid-template-columns: 1fr 1fr;
+    min-height: 25rem;
+  }
+
+  @media (max-width: 530px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 1rem;
+    min-height: 27rem;
+  }
+
+  @media (max-width: 400px) {
+    min-height: 25rem;
+  }
+
+  @media (max-width: 350px) {
+    padding: .5rem;
+  }
 }
 
 .QuestionPlayer {
@@ -14,6 +36,11 @@
   grid-row: 2 / 3;
   width: 100%;
   height: 50px;
+
+  @media (max-width: 690px) {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
 }
 
 @import '../../customPlayer.scss'

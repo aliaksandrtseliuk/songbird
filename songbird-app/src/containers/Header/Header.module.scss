@@ -4,4 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 690px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 350px) {
+    flex-direction: column;
+  }
 }
