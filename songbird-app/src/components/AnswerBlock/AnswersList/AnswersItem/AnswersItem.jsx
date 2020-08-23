@@ -58,7 +58,7 @@ class AnswersItem extends Component {
 
   render() {
     const {id, text} = this.props;
-    const cls = [classes.AnswersItem]
+    const cls = [classes.Circle]
 
     if (this.state.status === 'success') {
       cls.push(classes.success)
@@ -68,11 +68,11 @@ class AnswersItem extends Component {
 
     return (
       <li 
-        className={cls.join(' ')}
+        className={classes.AnswersItem}
         id={id}
         onClick={this.getUserAnswer}
       >
-        {text}
+        <span className={cls.join(' ')}></span>{text}
       </li>
     )
   }

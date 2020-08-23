@@ -9,18 +9,13 @@
   grid-gap: 2rem;
   border-radius: 1rem;
 
-  @media (max-width: 530px) {
-    padding: 1rem;
-    grid-gap: 1rem;
-    min-height: 56rem;
+  @media (max-width: 740px) {
+    display: flex;
+    flex-direction: column;
+    min-height: max-content;
   }
 
   @media (max-width: 500px) {
     margin-top: 1rem;
-  }
-
-  @media (max-width: 350px) {
-    padding: .5rem;
-    grid-gap: .5rem;
   }
 }
