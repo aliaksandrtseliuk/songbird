@@ -1,18 +1,22 @@
-import React from 'react'
-import classes from './YourAnswerBlock.module.scss'
+import React from "react";
+import classes from "./YourAnswerBlock.module.scss";
 
-import BirdInfo from './BirdInfo/BirdInfo.jsx'
+import BirdInfo from "./BirdInfo/BirdInfo.jsx";
 
-const YourAnswerBlock = props => {
+const YourAnswerBlock = (props) => {
   return (
     <div className={classes.YourAnswerBlock}>
-      { props.userAnswer || props.userAnswer === 0 ? 
-        <BirdInfo 
-          bird = { props.currentBird }
-        /> 
-        : <p>Послушайте плеер.<br />Выберите птицу из списка</p>}
+      {props.userAnswer || props.userAnswer === 0 ? (
+        <BirdInfo bird={props.currentBird} />
+      ) : (
+        <p>
+          Послушайте плеер.
+          <br />
+          Выберите птицу из списка
+        </p>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default YourAnswerBlock
+export default YourAnswerBlock;

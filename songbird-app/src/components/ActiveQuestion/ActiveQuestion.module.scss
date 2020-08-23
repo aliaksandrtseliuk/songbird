@@ -1,4 +1,4 @@
-.ActiveQuestion{
+.ActiveQuestion {
   margin-top: 2rem;
   padding: 2rem;
   width: 100%;
@@ -27,7 +27,7 @@
   }
 
   @media (max-width: 350px) {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 
@@ -43,4 +43,4 @@
   }
 }
 
-@import '../../customPlayer.scss'
+@import "../../customPlayer.scss";

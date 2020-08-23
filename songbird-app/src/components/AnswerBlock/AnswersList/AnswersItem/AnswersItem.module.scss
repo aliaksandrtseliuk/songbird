@@ -19,8 +19,8 @@
 
 .AnswersItem:hover,
 .AnswersItem:focus {
-    opacity: .8;
-  }
+  opacity: 0.8;
+}
 
 .Circle {
   margin-right: 1rem;
@@ -35,9 +35,9 @@
 }
 
 .success {
-  background: rgba(161, 240, 69, .7);
+  background: rgba(161, 240, 69, 0.7);
 }
 
 .error {
-  background: rgba(240, 87, 108, .7);
+  background: rgba(240, 87, 108, 0.7);
 }

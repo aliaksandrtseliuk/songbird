@@ -1,22 +1,22 @@
-import React from 'react'
-import classes from './RoundsList.module.scss'
-import RoundsItem from './RoundsItem/RoundsItem.jsx'
+import React from "react";
+import classes from "./RoundsList.module.scss";
+import RoundsItem from "./RoundsItem/RoundsItem.jsx";
 
-const RoundsList = props => {
+const RoundsList = (props) => {
   return (
     <ul className={classes.RoundsList}>
-      { props.rounds.map((item, index) => {
+      {props.rounds.map((item, index) => {
         return (
-          <RoundsItem 
+          <RoundsItem
             key={index}
             index={index}
             title={item}
             activeRound={props.activeRound}
           />
-        )
+        );
       })}
     </ul>
-  )
-}
+  );
+};
 
-export default RoundsList
+export default RoundsList;

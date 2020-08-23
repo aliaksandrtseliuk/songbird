@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import classes from './AnswerBlock.module.scss'
-import AnswersList from './AnswersList/AnswersList.jsx'
-import YourAnswerBlock from './YourAnswerBlock/YourAnswerBlock.jsx'
+import React, { Component } from "react";
+import classes from "./AnswerBlock.module.scss";
+import AnswersList from "./AnswersList/AnswersList.jsx";
+import YourAnswerBlock from "./YourAnswerBlock/YourAnswerBlock.jsx";
 
 class AnswerBlock extends Component {
   render() {
@@ -12,26 +12,26 @@ class AnswerBlock extends Component {
       rightAnswerNumber,
       getRightAnswer,
       userAnswer,
-      newSetState
-     } = this.props;
+      newSetState,
+    } = this.props;
 
-     return (
+    return (
       <section className={classes.AnswerBlock}>
-        <AnswersList 
-          currentScore = {currentScore} 
+        <AnswersList
+          currentScore={currentScore}
           answers={answers}
           roundPoints={roundPoints}
           rightAnswerNumber={rightAnswerNumber}
           getRightAnswer={getRightAnswer}
-          newSetState = {newSetState}
+          newSetState={newSetState}
         />
         <YourAnswerBlock
-          currentBird = {answers[userAnswer]}
-          userAnswer = {userAnswer}
+          currentBird={answers[userAnswer]}
+          userAnswer={userAnswer}
         />
       </section>
-    )
+    );
   }
 }
 
-export default AnswerBlock
+export default AnswerBlock;
