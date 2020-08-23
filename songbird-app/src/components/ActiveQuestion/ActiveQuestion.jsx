@@ -15,12 +15,12 @@ class ActiveQuestion extends Component {
     newSetState('rightAnswerNumber', newRightAnswerNumber)
   }
 
-  // componentDidUpdate() {
-  //   const { getRightAnswer } = this.props;
-  //   if (getRightAnswer) {
-  //       this.player.audio.pause()
-  //   }
-  // }
+  componentDidUpdate() {
+    const { getRightAnswer } = this.props;
+    if (getRightAnswer) {
+        this.audioPlayer.audio.current.pause()
+    }
+  }
 
   render() {
     const { getRightAnswer, currentQuestionsBlock, rightAnswerNumber } = this.props;
@@ -41,7 +41,7 @@ class ActiveQuestion extends Component {
           className={classes.QuestionPlayer}
           src = {currentQuestionsBlock[rightAnswerNumber - 1].audio}
           autoPlayAfterSrcChange={false}
-          ref={c => (this.player = c)}
+          ref={cb => (this.audioPlayer = cb)}
         />
       </section>
     )
