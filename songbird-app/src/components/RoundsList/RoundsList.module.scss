@@ -1,0 +1,12 @@
+.RoundsList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-radius: 10px;
+  background-color: #017ab3;
+
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

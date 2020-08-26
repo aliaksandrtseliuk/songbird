@@ -1,0 +1,13 @@
+.AnswersList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  border-radius: 10px;
+
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 740px) {
+    grid-gap: 0.5rem;
+  }
+}

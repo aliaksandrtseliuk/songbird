@@ -1,0 +1,43 @@
+.AnswersItem {
+  padding-left: 2.5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: #4da1c9;
+  cursor: pointer;
+
+  @media (max-width: 740px) {
+    padding: 1rem 2.5rem;
+  }
+
+  @media (max-width: 400px) {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.AnswersItem:hover,
+.AnswersItem:focus {
+  opacity: 0.8;
+}
+
+.Circle {
+  margin-right: 1rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #017ab3;
+
+  @media (max-width: 400px) {
+    margin-right: 1rem;
+  }
+}
+
+.success {
+  background: rgba(161, 240, 69, 0.7);
+}
+
+.error {
+  background: rgba(240, 87, 108, 0.7);
+}
