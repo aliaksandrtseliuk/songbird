@@ -28,8 +28,8 @@ class ModalBlock extends Component {
             <audio
               src="https://zvukipro.com/uploads/files/2017-09/1505636534_zvuk-1-mesto-aplodismenty.mp3"
               preload="none"
-              loop="true"
-              autoplay="autoplay"
+              loop={true}
+              autoPlay="autoplay"
             ></audio>
           </div>
           <ModalButton newSetState={newSetState} />

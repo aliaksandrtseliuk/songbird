@@ -28,6 +28,8 @@ class ActiveQuestion extends Component {
       rightAnswerNumber,
     } = this.props;
 
+    console.log('Правильный ответ: ', rightAnswerNumber);
+
     return (
       <section className={classes.ActiveQuestion}>
         <QuestionImage
